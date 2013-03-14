@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html> 
+  <head> 
+    <meta charset="iso-8859-1" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <title>FOGADE</title> 
+    <link rel="stylesheet" href="../../css/jquery.mobile-1.0a4.1.min.css" />
+    <link rel="stylesheet" href="../../css/wolfwalk.css" media="screen" type="text/css" />
+    <script src="../../js/jquery-1.6.4.min.js"></script>
+    <script src="../../js/jquery.mobile-1.0a4.1.min.js"></script>
+    <link href="styles.css" type="text/css" rel="stylesheet" />
+
+    <link href="../photoswipe.css" type="text/css" rel="stylesheet" />
+    <script type="text/javascript" src="../lib/klass.min.js"></script>
+    <script type="text/javascript" src="../code.photoswipe-3.0.4.min.js"></script>
+    <script type="text/javascript">
+      (function(window, PhotoSwipe) {
+        document.addEventListener('DOMContentLoaded', function() {
+          var options = {
+            getImageCaption: function(el) {
+              var captionText, captionEl;
+
+              // Get the caption from the alt tag
+              if (el.nodeName === "IMG"){
+                captionText = el.getAttribute('alt'); 
+              }
+              var i, j, childEl;
+              for (i=0, j=el.childNodes.length; i<j; i++) {
+                childEl = el.childNodes[i];
+                if (el.childNodes[i].nodeName === 'IMG') {
+                  captionText = childEl.getAttribute('alt'); 
+                }
+              }
+
+              // Return a DOM element with custom styling
+              captionEl = document.createElement('div');
+              captionEl.style.cssText = 'background: transparent; font-weight: bold; padding: 5px;';
+              captionEl.appendChild(document.createTextNode(captionText));
+              return captionEl;
+
+              // Alternatively you can just pass back a string. However, any HTML 
+              // markup will be escaped
+            },
+            loop: false,
+            captionAndToolbarAutoHideDelay: 0,
+            captionAndToolbarFlipPosition:  true
+          },
+          instance = PhotoSwipe.attach( window.document.querySelectorAll('#Gallery a'), options );
+        }, false);
+
+
+      } (window, window.Code.PhotoSwipe));
+    </script>
+  </head>
+  <body>
+    <div data-role="page" data-theme='d'>
+
+      <div id="tope">
+        <a href="../../index.html" rel="external" data-ajax="false"><img src="../../img/linea_mando.png" width="100%" /></a><br/>
+        <a href="../../index.html" rel="external" data-ajax="false"><img src="../../img/banner.png"      width="100%" /></a>
+      </div>
+
+      <div data-role="header">
+        <h1>NOTICIAS</h1>
+        <a href="../../index.html" rel="external" data-ajax="false" data-icon="home" data-iconpos="notext" data-direction="reverse">Inicio</a>
+      </div><!-- /header -->
+
+      <ul id="Gallery" class="gallery">
+        <li><a href="images/full/001.jpg" rel="external" data-ajax="false"><img src="images/thumb/001.jpg" alt="EN MATERIA DE LEGITIMACI&Oacute;N DE CAPITALES Y FINANCIAMIENTO DEL TERRORISMO ES IMPORTANTE SEGUIR LA RUTA DEL DINERO. “El dinero deja huellas”, as&iacute; lo afirm&oacute; Pedro Miguel Mollet durante la ponencia denominada “La Auditor&iacute;a forense como herramienta en la lucha contra la Legitimaci&oacute;n de Capitales”. En este sentido se&ntilde;al&oacute; que se debe a que el dinero es manejado a trav&eacute;s de los sistemas financieros, y estos tienen mecanismos propios para controlar tanto lo que ingresa como lo que egresa." /></a></li>
+        <li><a href="images/full/002.jpg" rel="external" data-ajax="false"><img src="images/thumb/002.jpg" alt="“GRACIAS AL PRESIDENTE CH&Aacute;VEZ TENGO UNA VIVIENDA DIGNA”. Durante 37 a&ntilde;os vivi&oacute; Xiomara Rivas en el sector Carapita, de Ant&iacute;mano, hasta el d&iacute;a en que lamentablemente perdi&oacute; su vivienda. En compa&ntilde;&iacute;a de su grupo familiar conformado por esposo e hijos fue trasladada a un refugio ubicado en la Av. Andr&eacute;s Bello de Caracas." /></a></li>
+        <li><a href="images/full/003.jpg" rel="external" data-ajax="false"><img src="images/thumb/003.jpg" alt="MINISTRO CALZADILLA RECORRI&Oacute; ESPACIOS DEL FONDO DONDE REPOSAN OBRAS DE ARTES. Pedro Calzadilla, Ministro del Poder Popular para la Cultura, visit&oacute; las instalaciones del Fondo de Protecci&oacute;n Social de los Dep&oacute;sitos Bancarios,  a fin de iniciar los procesos legales para la transferencia de obras de arte bajo custodia de este organismo." /></a></li>
+        <li><a href="images/full/004.jpg" rel="external" data-ajax="false"><img src="images/thumb/004.jpg" alt="FONDO DE PROTECCI&Oacute;N SOCIAL HACE ENTREGA DE REGALOS A LOS NI&Ntilde;OS DEL REFUGIO ANDR&Eacute;S BELLO. El Fondo de Protecci&oacute;n Social de los Dep&oacute;sitos Bancarios no para en su labor de llevar alegr&iacute;a y esperanzas a los ni&ntilde;os del refugio Andr&eacute;s Bellos. En ese sentido, el d&iacute;a jueves 22 del diciembre de 2011, a pocos d&iacute;as para la noche buena, David Alastre, presidente de esta instituci&oacute;n hizo entrega de regalos con motivo de la navidad a los ni&ntilde;os y ni&ntilde;as de este refugio." /></a></li>
+        <li><a href="images/full/005.jpg" rel="external" data-ajax="false"><img src="images/thumb/005.jpg" alt="FONDO ENTREGA REGALOS A NI&Ntilde;OS DE LA URBANIZACI&Oacute;N SANTA ANA EN CHARALLAVE. El compromiso del Fondo de Protecci&oacute;n Social de los Dep&oacute;sitos Bancarios, con las familias que se encontraban en el refugio Andr&eacute;s Bellos, y que se le fue otorgada sus viviendas en la urbanizaci&oacute;n Santa Ana de la Ciudad de Charallave el pasado 10 de diciembre del 2011, por parte del Gobierno Bolivariano no quedo all&iacute;." /></a></li>
+        <li><a href="images/full/006.jpg" rel="external" data-ajax="false"><img src="images/thumb/006.jpg" alt="GOBIERNO BOLIVARIANO LE RESPONDE A LOS AHORRISTAS DE BANCORO En un acto especial en el sal&oacute;n “Sim&oacute;n Bol&iacute;var” de un Centro Comercial conocido en la ciudad de Coro, se realiz&oacute; este 14 de diciembre de 2011, el pago de saldos mayores a Bs. 30.000 a un nutrido grupo de ahorristas de Bancoro, Banco Comercial, (en Proceso de liquidaci&oacute;n). David Alastre, presidente del Fondo de Protecci&oacute;n Social de los Dep&oacute;sitos Bancario, y la Gobernadora del estado Falc&oacute;n, Stella Lugo de Montilla encabezaron el evento e hicieron entrega de los cheques." /></a></li>
+        <li><a href="images/full/007.jpg" rel="external" data-ajax="false"><img src="images/thumb/007.jpg" alt="FAMILIAS DEL REFUGIO ANDR&Eacute;S BELLO: MILITANTES INCORREGIBLES DEL OPTIMISMO Basta un poco de esp&iacute;ritu aventurero para estar satisfechos, pues en esta vida, gracias a Dios, nada sucede como dese&aacute;bamos, como supon&iacute;amos, ni como ten&iacute;amos previsto. Esto, precisamente, pudo comprobarse el s&aacute;bado pasado, al cumplirse el d&eacute;cimo d&iacute;a del mes de diciembre del a&ntilde;o que est&aacute; a punto de terminar, cuando 21 familias pertenecientes al Refugio Andr&eacute;s Bello formaron parte del centenar de sonrisas que iluminaron y refrescaron aquella nublada pero calurosa tarde decembrina en las adyacencias de Charallave, en los Valles del Tuy." /></a></li>
+        <li><a href="images/full/008.jpg" rel="external" data-ajax="false"><img src="images/thumb/008.jpg" alt="EN MENOS DE 60 MINUTOS AHORRISTAS DEL BANCO FEDERAL RECIBEN PAGO DE ACREENCIAS (08 diciembre 2011).- Aproximadamente 40 minutos, y hasta menos, es el tiempo estimado para recorrer el circuito que lleva a los ahorristas del Banco Federal (en liquidaci&oacute;n) a recibir el cheque correspondiente al pago de acreencias, monto que resta luego de haber cobrado la garant&iacute;a por Bsf. 30 mil." /></a></li>
+        <li><a href="images/full/009.jpg" rel="external" data-ajax="false"><img src="images/thumb/009.jpg" alt="FONDO DE PROTECCI&Oacute;N SOCIAL DE LOS DEP&Oacute;SITOS BANCARIOS HOMENAJE&Oacute; A ‘MOROCHO’ HERN&Aacute;NDEZ A trav&eacute;s de los tiempos, numerosos venezolanos han destacado en el boxeo. Uno de ellos, el m&aacute;s grande de Venezuela, es el ‘Morocho’ Hern&aacute;ndez, quien el pasado primero de diciembre fue homenajeado por el Fondo de Protecci&oacute;n Social de los Dep&oacute;sitos Bancarios en las Instalaciones del Refugio Andr&eacute;s Bello de Caracas, casa hogar apadrinada por el Organismo." /></a></li>
+        <li><a href="images/full/010.jpg" rel="external" data-ajax="false"><img src="images/thumb/010.jpg" alt="156 DEPOSITANTES DE CASA PROPIA ACUDIERON EL PRIMER D&Iacute;A DE PAGO DE ACREENCIAS A partir del 5 de diciembre 4.633 ahorristas de Casa Propia (en proceso de liquidaci&oacute;n) le ser&aacute;n honrados sus saldos mayores a Bs. 30.000 que ten&iacute;an en Casa Propia, Entidad de Ahorro y Pr&eacute;stamo, C.A, para la fecha de su intervenci&oacute;n. En v&iacute;as de efectuar los respectivos pagos, est&aacute;n dispuestas seis agencias a escala nacional y 150 funcionarios para la atenci&oacute;n personalizada y entrega de los cheques. El primer d&iacute;a de jornada fueron atendidos 156 depositantes a escala nacional, ellos manifestaron su complacencia por la calidad de atenci&oacute;n ofrecida por los funcionarios habilitados para dicho operativo, al tiempo que destacaron que las v&iacute;as de comunicaci&oacute;n dispuestas por El Fondo de Protecci&oacute;n Social de los Dep&oacute;sitos Bancarios lograron la interconexi&oacute;n con los funcionarios que les facilitaron informaci&oacute;n para despejar dudas y conocer el estatus de su solicitud." /></a></li>
+        <li><a href="images/full/011.jpg" rel="external" data-ajax="false"><img src="images/thumb/011.jpg" alt="1.335 ACREENCIAS SE PAGARON EL PRIMER D&Iacute;A DEL OPERATIVO DE PAGO DE A LOS DEPOSITANTES DEL FEDERAL Desde muy tempranas horas de la ma&ntilde;ana los depositantes calificados en el tercer orden de prelaciones (mayores de 18 y menores de 55) y personas jur&iacute;dicas acudieron a las agencias- a escala nacional- habilitadas para el cobro de sus saldos mayores a Bs. 30.000. Llamado que hizo el Fondo de Protecci&oacute;n Social de los Dep&oacute;sitos Bancarios, por prensa nacional, en su car&aacute;cter de ente liquidador de las instituciones bancarias y sus empresas relacionadas." /></a></li>
+        <li><a href="images/full/012.jpg" rel="external" data-ajax="false"><img src="images/thumb/012.jpg" alt="DEPOSITANTES DEL FEDERAL, BANCORO Y CASA PROPIA COBRARAN SALDOS PENDIENTES PARA ESTE &Uacute;LTIMO BIMESTRE En pro de continuar honrando las acreencias de los depositantes de los bancos intervenidos, David Alastre, presidente del Fondo de Protecci&oacute;n Social de los Dep&oacute;sitos Bancarios inform&oacute; que para este &uacute;ltimo bimestre la instituci&oacute;n pagar&aacute; las acreencias pendientes a los ahorristas del Federal, Bancoro y Casa Propia que ten&iacute;an saldos mayores a Bs. 30.000" /></a></li>
+        <li><a href="images/full/013.jpg" rel="external" data-ajax="false"><img src="images/thumb/013.jpg" alt="EL BANCO SOBERANO DEL PUEBLO CELEBRA SUS 12 A&Ntilde;OS DE LOGROS EN LAS INSTALACIONES DE EL FONDO El Auditorio del Fondo de Protecci&oacute;n Social de los Dep&oacute;sitos Bancarios, sirvi&oacute; de escenario para que la gran familia del Banco del Pueblo Soberano celebrar&aacute; 12 a&ntilde;os de la creaci&oacute;n del Banco del Pueblo Soberano, instituci&oacute;n encargada de financiar los proyectos socio-productivos de nuestras comunidades y de otorgar cr&eacute;ditos a los peque&ntilde;os empresarios." /></a></li>
+        <li><a href="images/full/014.jpg" rel="external" data-ajax="false"><img src="images/thumb/014.jpg" alt="NUESTRA INSTITUCI&Oacute;N SE RESPONSABILIZA POR BRINDARLE A NI&Ntilde;OS Y NI&Ntilde;AS DEL REFUGIO ANDR&Eacute;S BELLO UN FUTURO DESLUMBRANTE La familia del Fondo de Protecci&oacute;n Social de los Dep&oacute;sitos Bancarios, de la mano con el Gobierno Bolivariano, y a trav&eacute;s del Ministerio de Finanzas, homenaje&oacute; a los ni&ntilde;os, ni&ntilde;as y adolescentes estudiantes que forman parte Refugio Andr&eacute;s Bello, con una basta cantidad de &uacute;tiles escolares que acrecentar&iacute;a su formaci&oacute;n educativa de la manera m&aacute;s grata posible." /></a></li>
+
+      </ul>
+    </div>
+
+      <div data-role="footer" style="text-align: center;">
+        <br/>
+        Direcci&oacute;n: Edificio Fondo de Protecci&oacute;n Social de los Dep&oacute;sitos Bancarios, Esquina San Jacinto, Caracas-Venezuela<br/>
+        Tel&eacute;fono: (0212) 546.00.00<br/>
+        Fax: (0212) 546.00.20<br/>
+        Copyright 2006. R.I.F. G-20003241-3<br/>
+        <br/><br/>
+      </div>
+    </div>
+  </body> 
+</html>
